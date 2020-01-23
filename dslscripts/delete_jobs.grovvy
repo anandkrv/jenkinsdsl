@@ -1,5 +1,5 @@
 jenkins.model.Jenkins.theInstance.getProjects().each { job ->
-    if (!job.name.contains('DSL-Test')) {
+    if (job.name.contains('DSL-Test')) {
         println job.name
         job.delete()
     }
